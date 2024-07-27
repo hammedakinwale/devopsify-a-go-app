@@ -5,7 +5,7 @@ FROM golang:1.22.5 as base
 WORKDIR /app
 
 # Copy go.mod file
-COPY go.mod .
+COPY go.mod ./
 
 # download dependencies
 RUN go mod download
