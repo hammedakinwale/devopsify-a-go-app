@@ -26,11 +26,12 @@ jobs:
       with:
         go-version: 1.22
 
-    - name: Build
-      run: go build -o go-web-app
 
     - name: change directory
       run: cd .. && cd ..
+      
+    - name: Build
+      run: go build -o go-web-app
 
     - name: Test
       run: go test
