@@ -29,8 +29,8 @@ jobs:
     - name: Build
       run: go build -o go-web-app
 
-    # - name: Test
-    #   run: go test .
+    - name: Test
+      run: go test ./...
   
   code-quality:
     runs-on: ubuntu-latest
@@ -92,5 +92,3 @@ jobs:
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
-
-
